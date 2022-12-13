@@ -25,7 +25,7 @@ export const App = () => {
         {
             id: 3,
             name: "Julius Churchs",
-            status: "Alive",
+            status: "Barely Alive",
             profession: "Java developer",
             twitter: "@julius_churchs",
             picture: "julio.jpg",
