@@ -20,12 +20,17 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "test:all": "react-scripts test --watchAll --collect-coverage",
+    "test:prod": "react-scripts test --watchAll --collect-coverage --watchAll=false",
+    "lint": "eslint ."
   },
   "eslintConfig": {
     "extends": [
       "react-app",
-      "react-app/jest"
+      "react-app/jest",
+      "plugin:@typescript-eslint/recommended",
+      "prettier"
     ]
   },
   "browserslist": {
@@ -38,6 +43,27 @@
       "last 1 chrome version",
       "last 1 firefox version",
       "last 1 safari version"
+    ],
+    "prettier": {
+      "singleQuote": true
+    }
+  },
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "plugins": [
+    "@typescript-eslint"
+  ],
+  "rules": {
+    "testing-library/no-render-in-setup": "off"
+  },
+  "jest": {
+    "coveragePathIgnorePatterns": [
+      "<rootDir>/src/reportWebVitals.ts",
+      "<rootDir>/src/index.ts",
+      "<rootDir>/src/tools/*"
     ]
   }
 }
