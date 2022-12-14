@@ -1,10 +1,10 @@
-export function Info({
+export const DandyInfo = ({
     totalSelected,
     handleSelectAll,
 }: {
     totalSelected: number;
     handleSelectAll: () => void;
-}) {
+}) => {
     return (
         <section className="controls">
             <p className="info">{totalSelected} gentlemen pointing at you</p>
@@ -14,4 +14,4 @@ export function Info({
             </button>
         </section>
     );
-}
+};

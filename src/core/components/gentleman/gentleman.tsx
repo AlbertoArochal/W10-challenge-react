@@ -11,12 +11,6 @@ export function Gentleman({
     handleDelete: (gentleManId: number) => void;
     handleSelect: (gentleManId: number) => void;
 }) {
-    const buttonDeleteClass =
-        'icon gentleman__icon gentleman__icon--delete fas fa-times';
-    const buttonSelectClass = gentleman.selected
-        ? 'icon gentleman__icon fas fa-check gentleman__icon--selected'
-        : 'icon gentleman__icon fas fa-check';
-
     return (
         <li className="gentleman">
             <div className="gentleman__avatar-container">
@@ -47,12 +41,16 @@ export function Gentleman({
                 </ul>
             </div>
             <Button
-                buttonClassName={buttonDeleteClass}
+                buttonClassName={
+                    gentleman.selected
+                        ? 'icon gentleman__icon fas fa-check gentleman__icon--selected'
+                        : 'icon gentleman__icon fas fa-check'
+                }
                 handleClick={handleDelete}
                 id={gentleman.id}
             ></Button>
             <Button
-                buttonClassName={buttonSelectClass}
+                buttonClassName="icon gentleman__icon gentleman__icon--delete fas fa-times"
                 handleClick={handleSelect}
                 id={gentleman.id}
             ></Button>
