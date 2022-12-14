@@ -1,4 +1,4 @@
-export type Gentleman = {
+export type GentlemanType = {
     id: number;
     name: string;
     status: string;
@@ -8,3 +8,5 @@ export type Gentleman = {
     alternativeText: string;
     selected: boolean;
 };
+
+export type GentlemenTypes = Array<GentlemanType>;
