@@ -8,5 +8,3 @@ export type GentlemanType = {
     alternativeText: string;
     selected: boolean;
 };
-
-export type GentlemenTypes = Array<GentlemanType>;
