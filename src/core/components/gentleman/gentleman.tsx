@@ -15,7 +15,7 @@ export function Gentleman({
             <div className="gentleman__avatar-container">
                 <img
                     className="gentleman__avatar"
-                    src={gentleman.picture}
+                    src={'src/img/' + gentleman.picture}
                     alt={gentleman.alternativeText}
                 />
                 <span className="gentleman__initial">{gentleman.name[0]}</span>
