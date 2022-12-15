@@ -1,4 +1,3 @@
-import { GentlemenTypes } from '../../types/gentlemanType';
 import { GentlemanType } from '../../types/gentlemanType';
 import { Button } from '../button/button';
 
